@@ -1,13 +1,5 @@
 library(RPostgreSQL)
 
-thisFile <- parent.frame(2)$ofile
-if(!is.null(thisFile)){
-    PATH <- normalizePath(file.path(dirname(thisFile ), '..'))
-}else{
-    PATH <- file.path('..', "common")
-}
-
-DEFCONFFILE <- file.path( PATH, 'etc', 'hostconf.r' )
 
 # Load data from PostgreSQL database. 
 # Arguments:

@@ -1,5 +1,6 @@
+source("parameters.r")
 source("queryTools.r")
-library(doby)
+library(doBy)
 library(methods)
 
 ##################################################################################################################################
@@ -40,7 +41,7 @@ methods = list(clean=function(){
                      data <<- data[!duplicated(data[, setdiff(names(data), 'ID')]), ] 
                 },
                registry_merge=function(){
-                     data <- merge(data, registry_df[, c('centreCode','IDRICOVERO','DATAORAINGTI','DATAORAUSCTI')])    
+                     data <<- merge(data, registry_df[, c('centreCode','IDRICOVERO','DATAORAINGTI','DATAORAUSCTI')])    
                 })
 
 setRefClass("beds", 
