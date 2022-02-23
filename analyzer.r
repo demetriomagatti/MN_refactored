@@ -27,7 +27,3 @@ registry <- new("registry")
 registry$initialize_default_values()
 registry$query <- query
 registry$load()
-
-
-
-
